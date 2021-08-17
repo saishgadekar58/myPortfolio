@@ -11,6 +11,7 @@ function App() {
   return (
     <>
       <Navbar />
+
       <Switch>
         <Route path="/about" component={About} />
         <Route path="/projects" component={Projects} />

@@ -1,12 +1,17 @@
 import React from "react";
 import { Typewriter } from "react-simple-typewriter";
+import ParticleComponent from "./ParticleComponent";
 
 export default function Home() {
   return (
     <div className="home">
       <div className="home-row">
+        <ParticleComponent className="particle" />
+
         <div className="typing">
-          <div className="static-text">I'm Saish Gadekar</div>
+          <div className="static-text">
+            <span> I'm </span> Saish Gadekar
+          </div>
           <div className="loop">
             <Typewriter
               words={["An Engineer", "A Gamer", "A Web Developer"]}

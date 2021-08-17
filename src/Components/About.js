@@ -6,7 +6,7 @@ import TechStack from "./TechStack";
 
 export default function About() {
   return (
-    <Container fluid className="about-section">
+    <Container fluid className="aboutCont">
       <Container>
         <section className="aboutSection">
           <Row style={{ justifyContent: "center", padding: "10px" }}>

@@ -35,7 +35,7 @@ Variables
   --clr-red-light: hsl(360, 71%, 66%);
   --clr-green-dark: hsl(125, 67%, 44%);
   --clr-green-light: hsl(125, 71%, 66%);
-  --clr-black: #222;
+  --clr-black: rgb(0, 0, 0);
   --transition: all 0.3s linear;
   --spacing: 0.1rem;
   --radius: 0.25rem;
@@ -60,8 +60,7 @@ Global Styles
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  /* background: var(--clr-grey-10); */
-  background-image: var(--image-gradient), url(./images/bkg2.jpg);
+  background: var(--clr-black);
 
   overflow-x: hidden;
   color: var(--clr-grey-1);
@@ -201,9 +200,6 @@ nav {
   height: 10rem;
 }
 @media screen and (min-width: 800px) {
-  body {
-    background-image: var(--image-gradient), url(./images/bkg2.jpg);
-  }
   .nav-center {
     max-width: 1170px;
     margin: 0 auto;
@@ -250,6 +246,9 @@ nav {
   .home-row .typing .static-text {
     font-size: 5rem !important ;
   }
+  .home-row .typing .static-text span {
+    color: #00ff00 !important ;
+  }
 
   .home-row .typing .loop {
     font-size: 4rem !important;
@@ -262,10 +261,13 @@ nav {
   .about {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
-    margin-top: 3rem;
+    margin-top: 3rem !important;
   }
   .aboutSection {
     margin: 0 5rem !important;
+  }
+  .aboutCont {
+    background-image: var(--image-gradient), url(./images/bkg2.jpg) !important;
   }
   .about .text-div {
     display: flex !important;
@@ -325,13 +327,113 @@ nav {
     padding: 20px !important;
     line-height: 1.6 !important;
   }
+  /* /////////////contact////////////////////////////// */
+  #contact {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .page {
+    position: relative !important;
+    background: url(./images/header-1.jpg) !important;
+    height: 89vh !important;
+    overflow-y: hidden !important;
+  }
+
+  #contact .contactDiv {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-content: center !important;
+    width: 65% !important;
+    margin: 3rem auto !important;
+  }
+  #contact .contactDiv .textDiv p {
+    color: #fff !important;
+    font-size: 1.5rem !important;
+    line-height: 1 !important;
+    font-weight: 500 !important;
+  }
+  #contact .contactDiv .imgDiv .emailLogo {
+    height: 3rem !important;
+    width: 4rem !important;
+    color: rgba(228, 228, 228, 0.867) !important;
+    display: block !important;
+  }
+
+  .formDiv {
+    display: flex !important;
+    flex-direction: row !important;
+    width: 60% !important;
+    justify-content: space-evenly !important;
+    align-items: center !important;
+    margin: 0.5rem auto !important;
+    height: 0 !important;
+  }
+  .formDiv form textarea {
+    width: 50rem !important;
+  }
+  .formDiv .details {
+    align-self: flex-start !important;
+    margin-left: 5% !important;
+  }
+  .formDiv .details h4 {
+    font-size: 1.5rem !important;
+    color: #fff !important;
+    font-weight: 500 !important;
+    text-align: start !important;
+  }
+  .formDiv .details .address p,
+  .formDiv .details .address span {
+    font-size: 1.2rem !important;
+    color: #fff !important;
+  }
+
+  .formDiv form {
+    width: 70% !important;
+  }
+  .formDiv form label {
+    font-size: 1.2rem !important;
+    color: black !important;
+    font-weight: 500 !important;
+  }
+  .formDiv form input {
+    width: 100% !important;
+    font-size: 1.5rem !important;
+    font-weight: 300 !important;
+  }
+  .formDiv form .textArea {
+    display: flex !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    margin-top: 5% !important;
+  }
+  .formDiv form .submitButton button {
+    width: 100% !important;
+    margin-top: 3% !important;
+    font-size: 1.2rem !important;
+    font-weight: 600 !important;
+    font-size: 1.5rem !important;
+    border-radius: 5px !important;
+    border: 1px solid black !important;
+    background-color: rgba(228, 228, 228, 0.267) !important;
+  }
+
+  #tsparticles {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: -1 !important;
+  }
 }
 /* /////////////home/////////////////////// */
 
 .home {
   height: 91vh;
   width: 100%;
-  background: url(./images/header-1.jpg);
   background-size: cover;
   background-position: bottom;
 }
@@ -354,11 +456,22 @@ nav {
   color: #fff;
   font-size: 4rem;
 }
+.home-row .typing .static-text span {
+  color: #00ff00;
+}
 .home-row .typing .loop {
-  color: var(--clr-primary-5);
+  color: #00ff00;
   font-weight: bold;
   font-size: 3rem;
   text-align: center;
+}
+#tsparticles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 /* ////////about////////// */
 .about .img-div img {
@@ -369,6 +482,11 @@ nav {
 .about {
   display: flex;
   flex-direction: column-reverse;
+}
+.about .img-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .about .text-div {
   display: flex;
@@ -425,4 +543,96 @@ li {
 .skills .row {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+}
+/* /////////contact////// */
+#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.page {
+  background: url(./images/header-1.jpg);
+  height: 90.9vh;
+  overflow-x: hidden;
+}
+#contact .contactDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 70%;
+  margin-top: 2rem;
+}
+#contact .contactDiv .imgDiv .emailLogo {
+  height: 1.5rem;
+  width: 2.5rem;
+  color: rgba(228, 228, 228, 0.867);
+}
+#contact .contactDiv .imgDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+#contact .contactDiv .textDiv p {
+  color: #fff;
+  font-size: 1rem;
+  letter-spacing: 0.8px;
+  line-height: 1;
+  font-weight: 400;
+}
+.formDiv {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem auto;
+  height: 32rem;
+}
+.formDiv form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+}
+.formDiv form textarea {
+  width: 11rem;
+  font-size: 1.2rem;
+}
+.formDiv form label {
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: 500;
+}
+.formDiv form input {
+  width: 100%;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+.formDiv form .submitButton button {
+  width: 95%;
+  margin-top: 3%;
+  font-size: 1rem;
+  font-weight: 600;
+  font-size: 1.3rem;
+  border-radius: 5px;
+  border: 1px solid black;
+  background-color: rgba(228, 228, 228, 0.267);
+}
+.formDiv .details {
+  align-self: center;
+  margin-top: 1.5rem;
+}
+.formDiv .details h4 {
+  font-size: 1.3rem;
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+}
+.formDiv .details .address p,
+.formDiv .details .address span {
+  font-size: 1rem;
+  color: #fff;
 }
