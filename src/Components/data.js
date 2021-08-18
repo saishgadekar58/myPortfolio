@@ -26,17 +26,17 @@ export const links = [
 export const social = [
   {
     id: 1,
-    url: "https://www.github.com",
+    url: "https://github.com/saishgadekar58",
     icon: <FaGithub size={28} />,
   },
   {
     id: 2,
-    url: "https://www.instagram.com",
+    url: "https://www.instagram.com/saish_janai_katsura_da/",
     icon: <FaInstagram size={28} />,
   },
   {
     id: 3,
-    url: "https://www.twitter.com",
+    url: "https://www.linkedin.com/in/saish-gadekar-9a26541b4/",
     icon: <FaLinkedin size={28} />,
   },
 ];

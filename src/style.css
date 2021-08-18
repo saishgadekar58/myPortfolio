@@ -392,6 +392,7 @@ nav {
 
   .formDiv form {
     width: 70% !important;
+    margin-top: 0 !important;
   }
   .formDiv form label {
     font-size: 1.2rem !important;
@@ -420,13 +421,137 @@ nav {
     background-color: rgba(228, 228, 228, 0.267) !important;
   }
 
-  #tsparticles {
+  .defaultLines {
     position: absolute !important;
     top: 0 !important;
     left: 0 !important;
     width: 100% !important;
     height: 100% !important;
     z-index: -1 !important;
+  }
+  /* /////////project/////// */
+  .section-center {
+    width: 95vw !important;
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .bubble {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 210% !important;
+    z-index: -1 !important;
+  }
+
+  .photo {
+    height: 150px !important;
+  }
+  .menu {
+    padding: 5rem 0 !important;
+  }
+  .title {
+    text-align: center !important;
+    margin-bottom: 2rem !important;
+    color: #fff;
+  }
+
+  .underline {
+    width: 20rem !important;
+    height: 0.25rem !important;
+    background: #fff !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .btn-container {
+    margin-bottom: 4rem !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+  .filter-btn {
+    background: #fff !important;
+    border-color: silver !important;
+    font-size: 1rem !important;
+    text-transform: capitalize !important;
+    margin: 0 0.5rem !important;
+    letter-spacing: 1px !important;
+    padding: 0.375rem 0.75rem !important;
+    color: var(--clr-gold) !important;
+    cursor: pointer !important;
+    transition: var(--transition) !important;
+    border-radius: var(--radius) !important;
+  }
+  .filter-btn:hover {
+    background: var(--clr-gold) !important;
+    color: var(--clr-white) !important;
+  }
+  .section-center {
+    width: 90vw !important;
+    margin: 0 auto !important;
+    max-width: 1170px !important;
+    display: grid !important;
+    gap: 3rem 2rem !important;
+    justify-items: center !important;
+    margin-bottom: 0 !important;
+  }
+  .item {
+    grid-template-columns: 225px 1fr !important;
+    gap: 0 1.25rem !important;
+    max-width: 40rem !important;
+  }
+  .photo {
+    object-fit: cover !important;
+    height: 200px !important;
+    width: 100% !important;
+    border: 0.25rem solid var(--clr-gold) !important;
+    border-radius: var(--radius) !important;
+    display: block !important;
+  }
+  .item-info header {
+    display: flex !important;
+    justify-content: space-between !important;
+    border-bottom: 0.5px solid var(--clr-grey-5) !important;
+  }
+  .item-info h4 {
+    margin-bottom: 0.5rem !important;
+    font-size: 1.2rem !important;
+    color: #fff !important;
+    text-align: start !important;
+  }
+  .item-info p {
+    font-size: 1rem !important;
+    color: #fff !important;
+  }
+  .item-info {
+    display: block !important;
+  }
+  .btnsDiv {
+    display: flex !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    margin-top: 3%;
+  }
+  .btnsDiv .eye {
+    height: 2rem !important;
+    width: 3rem !important;
+    color: #fff !important;
+  }
+  .btnsDiv .ghub {
+    height: 2rem !important;
+    width: 3rem !important;
+    color: #fff !important;
+  }
+  .btnsDiv .eye:hover {
+    color: aquamarine !important;
+    transition: color 0.5s ease-in-out !important;
+  }
+  .btnsDiv .ghub:hover {
+    color: aquamarine !important;
+    transition: color 0.5s ease-in-out !important;
+  }
+
+  .item-text {
+    margin-bottom: 0 !important;
+    padding-top: 1rem !important;
   }
 }
 /* /////////////home/////////////////////// */
@@ -465,7 +590,7 @@ nav {
   font-size: 3rem;
   text-align: center;
 }
-#tsparticles {
+.defaultLines {
   position: absolute;
   top: 0;
   left: 0;
@@ -592,10 +717,11 @@ li {
   height: 32rem;
 }
 .formDiv form {
-  width: 50%;
+  width: 65%;
   display: flex;
   flex-direction: column;
   height: 80%;
+  margin-top: 2rem;
 }
 .formDiv form textarea {
   width: 11rem;
@@ -624,6 +750,8 @@ li {
 .formDiv .details {
   align-self: center;
   margin-top: 1.5rem;
+  width: 80%;
+  padding-left: 1.5rem;
 }
 .formDiv .details h4 {
   font-size: 1.3rem;
@@ -635,4 +763,107 @@ li {
 .formDiv .details .address span {
   font-size: 1rem;
   color: #fff;
+}
+/* ////////////project//////// */
+menu {
+  padding: 5rem 0;
+}
+.title {
+  text-align: center;
+  margin-bottom: 5rem;
+  color: #fff;
+}
+
+.underline {
+  width: 15rem;
+  height: 0.25rem;
+  background: #fff;
+  margin-left: auto;
+  margin-right: auto;
+}
+.btn-container {
+  display: none;
+}
+
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+  display: grid;
+  gap: 3rem 2rem;
+  justify-items: center;
+  overflow-x: hidden;
+  margin-bottom: 3rem;
+}
+.item {
+  display: grid;
+  gap: 1rem 2rem;
+  max-width: 25rem;
+}
+.photo {
+  object-fit: cover;
+  height: 200px;
+  width: 100%;
+  border: 0.25rem solid var(--clr-gold);
+  border-radius: var(--radius);
+  display: block;
+}
+.item-info header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.5px dotted var(--clr-grey-5);
+}
+.item-info h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #fff;
+  text-align: center;
+}
+.item-info p {
+  font-size: 0.8rem;
+  color: #fff;
+}
+.btnsDiv {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 3%;
+}
+.btnsDiv .eye {
+  height: 2rem;
+  width: 3rem;
+  color: #fff;
+}
+.btnsDiv .ghub {
+  height: 2rem;
+  width: 3rem;
+  color: #fff;
+}
+.btnsDiv .eye:hover {
+  color: aquamarine;
+  transition: color 0.5s ease-in-out;
+}
+.btnsDiv .ghub:hover {
+  color: aquamarine;
+  transition: color 0.5s ease-in-out;
+}
+
+.item-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-text {
+  margin-bottom: 0;
+  padding-top: 1rem;
+}
+.bubble {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 385%;
+  z-index: -1;
 }

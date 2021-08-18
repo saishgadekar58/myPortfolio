@@ -94,6 +94,7 @@ export default function Contact() {
                 cols="70"
                 rows="5"
                 value={message}
+                required
                 onChange={(e) => setMessage(e.target.value)}
                 id="contactMessage"
                 name="contactMessage"
