@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Categories from "../Assests/Categories";
-import items from "../Assests/dataProjects";
+import items from "../Assests/data/dataProjects";
 import ProjectDetails from "../Assests/ProjectDetails";
-import ParticleBubble from "./ParticleBubble";
+import ParticleBubble from "../Assests/animation/ParticleBubble";
 
 const allCategories = ["all", ...new Set(items.map((item) => item.category))];
 

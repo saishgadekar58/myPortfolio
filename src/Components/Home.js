@@ -1,6 +1,6 @@
 import React from "react";
 import { Typewriter } from "react-simple-typewriter";
-import ParticleComponent from "./ParticleComponent";
+import ParticleComponent from "../Assests/animation/ParticleComponent";
 
 export default function Home() {
   return (

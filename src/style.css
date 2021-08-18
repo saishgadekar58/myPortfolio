@@ -137,6 +137,29 @@ p {
   margin: 0 auto;
   max-width: var(--max-width);
 }
+.download {
+  position: absolute;
+  top: 38.5rem;
+  left: 37%;
+}
+.download a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.download a .icon {
+  border-radius: 100%;
+  background-color: var(--clr-primary-5);
+  color: #fff;
+  height: 1.5rem;
+  width: 2rem;
+}
+.download a p {
+  color: var(--clr-primary-5);
+  font-size: 1rem;
+}
+
 /* 
 @media screen and (min-width: 992px) {
   .section {
@@ -200,6 +223,28 @@ nav {
   height: 10rem;
 }
 @media screen and (min-width: 800px) {
+  .download {
+    position: absolute !important;
+    top: 6rem !important;
+    left: 83.7%;
+  }
+  .download a {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-direction: column !important;
+  }
+  .download a .icon {
+    border-radius: 100% !important;
+    background-color: var(--clr-primary-5) !important;
+    color: #fff !important;
+    height: 2.3rem !important;
+    width: 3rem !important;
+  }
+  .download a p {
+    color: var(--clr-primary-5) !important;
+    font-size: 1rem !important;
+  }
   .nav-center {
     max-width: 1170px;
     margin: 0 auto;
@@ -268,6 +313,7 @@ nav {
   }
   .aboutCont {
     background-image: var(--image-gradient), url(./images/bkg2.jpg) !important;
+    height: 225vh !important;
   }
   .about .text-div {
     display: flex !important;
@@ -299,12 +345,15 @@ nav {
     margin: 3rem 0;
   }
 
-  .skills .row {
+  .skills {
     display: grid !important ;
+    gap: 3% !important;
     grid-template-columns: repeat(5, 1fr) !important;
+    margin-left: -2rem !important;
   }
   .tech-icons {
     font-size: 4.5em !important;
+    width: 100% !important;
     margin: 15px !important;
     padding: 10px !important;
     opacity: 0.93 !important;
@@ -439,7 +488,7 @@ nav {
     top: 0 !important;
     left: 0 !important;
     width: 100% !important;
-    height: 210% !important;
+    height: 215% !important;
     z-index: -1 !important;
   }
 
@@ -608,6 +657,10 @@ nav {
   display: flex;
   flex-direction: column-reverse;
 }
+.aboutCont {
+  background-image: var(--image-gradient), url(./images/bkg2.jpg);
+  height: 237vh;
+}
 .about .img-div {
   display: flex;
   justify-content: center;
@@ -638,6 +691,7 @@ li {
 .tech-icons {
   font-size: 4.5em;
   margin: 10px;
+  width: 100%;
   padding: 10px;
   opacity: 0.93;
   border: 1.7px solid rgba(200, 137, 230, 0.637);
@@ -663,11 +717,15 @@ li {
   font-size: 2rem;
   color: var(--clr-primary-5);
   text-align: center;
-  margin: 2rem 0;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
 }
-.skills .row {
+.skills {
   display: grid;
+  column-gap: 3%;
+  width: 95%;
   grid-template-columns: repeat(2, 1fr);
+  margin-left: 0rem;
 }
 /* /////////contact////// */
 #contact {
@@ -801,7 +859,7 @@ menu {
   max-width: 25rem;
 }
 .photo {
-  object-fit: cover;
+  object-fit: unset;
   height: 200px;
   width: 100%;
   border: 0.25rem solid var(--clr-gold);
