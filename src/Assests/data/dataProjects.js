@@ -6,7 +6,7 @@ const menu = [
     img: "primg/infinity-shop.png",
     eye: "https://infinity-shop-app.herokuapp.com/",
     ghub: "https://github.com/saishgadekar58/Infinity-shop",
-    desc: "This is a E-commerce website created using reactJs as the front-end and expressJs as the back-end ,the apis used are custom made and mongoDb atlas is used as the database",
+    desc: "This is a E-commerce website created using reactJs as the front-end ,redux as the state management system and expressJs as the back-end ,the apis used are custom made and mongoDb atlas is used as the database",
   },
   {
     id: 2,
