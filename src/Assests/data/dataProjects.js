@@ -60,7 +60,7 @@ const menu = [
     img: "./primg/vishudAjivam.png",
     eye: "https://saishgadekar58.github.io/visudh-ajivam-webpage/",
     ghub: "https://github.com/saishgadekar58/visudh-ajivam-webpage",
-    desc: "This a website for a online medical store,this project was a task in my internship at Vishud Ajivam.In this i have used BootStrap for styling and Jquery for functionality and aos library for animations ",
+    desc: "This a website for a online medical store.In this i have used BootStrap for styling and Jquery for functionality and aos library for animations ",
   },
 ];
 
